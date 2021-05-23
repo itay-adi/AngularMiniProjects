@@ -1,28 +1,28 @@
-function calculator(a,b){
+function Calculator(a,b){
     this.a = a;
     this.b = b;
 }
 
-calculator.prototype.add = function () {
+Calculator.prototype.add = function () {
     return (this.a + this.b);
 }
 
-calculator.prototype.sub = function () {
+Calculator.prototype.sub = function () {
     return (this.a - this.b);
 }
 
-calculator.prototype.mult = function () {
+Calculator.prototype.mult = function () {
     return (this.a * this.b);
 }
 
-calculator.prototype.log = function () {
-    console.log("The sum of " + this.a + " and " + this.b + " is " + this.add());
-    console.log("The substruction of " + this.a + " and " + this.b + " is " + this.sub());
-    console.log("The multiplication  of " + this.a + " and " + this.b + " is " + this.mult());
+Calculator.prototype.log = function () {
+    console.log("The sum of " + this.a + " and " + this.b + " is: " + this.add());
+    console.log("The substruction of " + this.a + " and " + this.b + " is: " + this.sub());
+    console.log("The multiplication  of " + this.a + " and " + this.b + " is: " + this.mult());
 }
 
-var c1 = new calculator(5,10);
-var c2 = new calculator(4,3);
+var c1 = new Calculator(5,10);
+var c2 = new Calculator(4,3);
 
 c1.log();
 
