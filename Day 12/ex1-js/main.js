@@ -26,4 +26,6 @@ var c2 = new Calculator(4,3);
 
 c1.log();
 
-setTimeout(function(){ c1.log.call(c1) }, 2000);
+setTimeout(function() {
+    c1.log()},
+    2000);
