@@ -1,0 +1,11 @@
+<input #myInput (input)="SetKeyword(myInput.value)" type="search" [disabled]="isBusy">
+<button (click)="Search()" [disabled]="isBusy">Go!</button>
+<img
+  *ngIf="isBusy"
+  src="https://powerusers.microsoft.com/t5/image/serverpage/image-id/118082i204C32E01666789C/image-size/large?v=v2&px=999">
+
+<ul>
+  <li *ngFor="let res of results; let i = index">
+    {{i+1}}, {{res}}
+  </li>
+</ul>

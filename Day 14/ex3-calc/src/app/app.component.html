@@ -1,0 +1,9 @@
+<div>a: <input #myfInput (input)="SetA(myfInput.valueAsNumber)" type="number"></div> 
+<div>b: <input #mysInput (input)="SetB(mysInput.valueAsNumber)"type="number"></div>
+<button (click)="Calc()">Go!</button>
+
+<ul *ngIf="isActivated">
+  <li>{{a}} + {{b}} = {{results[0]}}</li>
+  <li>{{a}} - {{b}} = {{results[1]}}</li>
+  <li>{{a}} * {{b}} = {{results[2]}}</li>
+</ul>
