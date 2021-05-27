@@ -10,7 +10,6 @@ import { QUESTIONS } from './model/questions';
 export class AppComponent {
   currentQuestion: Question;
   currentQuestionIndex: number;
-  pageTitle: string = "welcome";
 
   summary: Question[]; //A collection of questions the user has already answered
   isQuizOver: boolean;
@@ -30,7 +29,7 @@ export class AppComponent {
       ++this.currentQuestionIndex;
       this.currentQuestion = QUESTIONS[this.currentQuestionIndex];
 
-      if(null == this.currentQuestion){
+      if(!this.currentQuestion){
         this.isQuizOver = true;
       }
     }
