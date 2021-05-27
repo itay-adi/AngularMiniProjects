@@ -1,5 +1,6 @@
-<div>a: <input #myfInput (input)="SetA(myfInput.valueAsNumber)" type="number"></div> 
-<div>b: <input #mysInput (input)="SetB(mysInput.valueAsNumber)"type="number"></div>
+<h1>Calculator</h1>
+<div>a: <input #aInput (input)="SetA(aInput.valueAsNumber)" type="number"></div> 
+<div>b: <input #bInput (input)="SetB(bInput.valueAsNumber)" type="number"></div>
 <button (click)="Calc()">Go!</button>
 
 <ul *ngIf="isActivated">

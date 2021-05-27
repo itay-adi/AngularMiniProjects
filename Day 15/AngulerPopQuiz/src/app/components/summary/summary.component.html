@@ -1,0 +1,9 @@
+<div class="root">
+    <div class="pastQuestion" *ngFor="let question of questions"
+        [class.right]="question.userAnswer===question.correctAnswer"
+        [class.wrong]="question.userAnswer!==question.correctAnswer"
+    >
+        <h5>{{question.caption}}</h5>
+        <p>{{question.answers[question.userAnswer]}}</p>
+    </div>
+</div>
