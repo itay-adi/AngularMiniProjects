@@ -1,0 +1,10 @@
+<app-color-editor></app-color-editor>
+
+<span class="user">Your Guess</span>
+<span class="computer">Computer</span>
+<app-color-box class="user" [color]="MyColor$ | async"></app-color-box>
+<app-color-box class="computer" [color]="compColor$ | async"></app-color-box>
+
+<app-random-color></app-random-color>
+
+<app-success *ngIf="isSuccesuble$ | async"></app-success>

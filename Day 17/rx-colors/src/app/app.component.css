@@ -1,0 +1,20 @@
+:host{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.user {
+    grid-column: 2;
+    font-size: 30px;
+}
+
+.computer {
+    grid-column: 3;
+    font-size: 30px;
+}
+
+app-color-editor {
+    grid-column: 1;
+    grid-row: 2;
+}

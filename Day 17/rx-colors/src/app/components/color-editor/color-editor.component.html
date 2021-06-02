@@ -1,0 +1,16 @@
+<div>
+    <div class="row">
+        <label>Red: </label>
+        <input #red type="number" min="0" max="255" (input)="SetRed(red.value)">
+    </div>
+
+    <div class="row">
+        <label>Green: </label>
+        <input #green type="number" min="0" max="255" (input)="SetGreen(green.value)">
+    </div>
+
+    <div class="row">
+        <label>Blue: </label>
+        <input #blue type="number" min="0" max="255" (input)="SetBlue(blue.value)">
+    </div>
+</div>
