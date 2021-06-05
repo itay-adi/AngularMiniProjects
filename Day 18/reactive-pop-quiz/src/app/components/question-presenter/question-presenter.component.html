@@ -1,0 +1,9 @@
+<div *ngIf="(currentQuestion | async) as cq">
+    <h2>{{cq.caption}}</h2>
+    <ul>
+        <li *ngFor="let answer of cq.answers; let i = index" 
+            (click)="onSelectAnswer(i)">
+            {{answer}}
+        </li>
+    </ul>
+</div>
