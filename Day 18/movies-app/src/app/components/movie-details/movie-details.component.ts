@@ -53,4 +53,10 @@ export class MovieDetailsComponent implements OnInit {
   private getCurrentIndex(): number{
     return Number(this.route.snapshot.params['index']);
   }
+
+  gotoEdit(){
+    let index = this.getCurrentIndex();
+
+    this.router.navigate(['movies', index, 'edit'])
+  }
 }

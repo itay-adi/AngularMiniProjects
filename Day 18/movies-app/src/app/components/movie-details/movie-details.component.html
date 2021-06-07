@@ -4,6 +4,7 @@
     <h1>{{movie.caption}}</h1>
     <p>{{movie.description}}</p>
     <img [src]="movie.poster">
+    <button (click)="gotoEdit()">Edit</button>
 </div>
 
 <button *ngIf="hasNext$ | async" (click)="gotoNext()">Next</button>

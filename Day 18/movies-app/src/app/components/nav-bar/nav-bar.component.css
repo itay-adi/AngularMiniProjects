@@ -14,3 +14,12 @@ a{
 a.here{
     background-color: rgb(146, 180, 146);
 }
+
+.seperator{
+    flex: 1;
+}
+
+.log{
+    align-self: center;
+    margin: 10px;
+}
