@@ -1,0 +1,16 @@
+:host{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(182, 207, 182);
+}
+
+a{
+    display: flex;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+a.here{
+    background-color: rgb(146, 180, 146);
+}

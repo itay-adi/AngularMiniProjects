@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+div{
+    padding: 6px;
+    cursor: pointer;
+}
+
+div:hover{
+    background-color: rgb(209, 230, 209);
+}
