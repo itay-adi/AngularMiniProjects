@@ -8,6 +8,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movies/:index', component: MovieDetailsComponent }, //":" is a mark for a parameter
