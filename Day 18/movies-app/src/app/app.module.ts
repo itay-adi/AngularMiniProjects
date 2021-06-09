@@ -11,6 +11,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { MovieEditComponent } from './components/movie-edit/movie-edit.component';
 import { AccountComponent } from './components/account/account.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorsPresenterComponent } from './components/errors-presenter/errors-presenter.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MovieDetailsComponent,
     MovieEditComponent,
     AccountComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ErrorsPresenterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
