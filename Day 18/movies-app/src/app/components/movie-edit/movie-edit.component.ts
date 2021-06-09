@@ -29,12 +29,14 @@ export class MovieEditComponent implements OnInit {
 
   private async buildForm(){
     this.form = new FormGroup({
+      id: new FormControl(),
       caption: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required, wordsVaidators(8)]),
       poster: new FormControl('',[Validators.required, urlValidator]),
     });
 
     let initialMovie: Movie = {
+      id: await this.movie$.pipe(first(), map(m => m.id)).toPromise(),
       caption: await this.movie$.pipe(first(), map(m => m.caption)).toPromise(),
       description: await this.movie$.pipe(first(), map(m => m.description)).toPromise(),
       poster: await this.movie$.pipe(first(), map(m => m.poster)).toPromise()
@@ -54,8 +56,6 @@ export class MovieEditComponent implements OnInit {
   }
   
   onGo(){
-    console.log(this.form.value);
-
     this.dataService.setMovieByID(this.form.value);
   }
 

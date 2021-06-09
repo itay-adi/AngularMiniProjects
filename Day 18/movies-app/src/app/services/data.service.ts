@@ -46,7 +46,7 @@ export class DataService {
 
   setMovieByID(movie: Movie): Promise<Movie>{
     const url = `${this.baseUrl}/movies/${movie.id}`;
-    console.log(url);
+
     return this.httpClient
             .put<Movie>(url, movie)
             .toPromise();
