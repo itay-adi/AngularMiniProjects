@@ -23,6 +23,7 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn$ = this.auth.isLoggedIn();
+    
     this.userType$ = this.isLoggedIn$.pipe(
       map(res => this.userType(res))
     );

@@ -15,16 +15,27 @@ import { urlValidator, wordsVaidators } from 'src/app/validations/general-valida
 export class MovieEditComponent implements OnInit {
   form!: FormGroup;
 
-  index$!: Observable<Movie>;
+  //index$!: Observable<Movie>;
   movie$!: Observable<Movie>;
 
   constructor(private dataService: DataService,
               private route: ActivatedRoute, //ActivatedRoute helps to get data from the URL
-              private router: Router) { }
+              private router: Router,
+              ) { }
 
   ngOnInit(): void {
     this.initObservers();
     this.buildForm();
+  }
+
+  private initObservers(){
+    let index$ = this.route.params.pipe(
+      map(prms => Number(prms['index']))
+    );
+
+    this.movie$ = index$.pipe(
+      switchMap(index => this.dataService.getMovieByIndex(index))
+    )
   }
 
   private async buildForm(){
@@ -45,16 +56,6 @@ export class MovieEditComponent implements OnInit {
     this.form.reset(initialMovie);
   }
 
-  private initObservers(){
-    let index$ = this.route.params.pipe(
-      map(prms => Number(prms['index']))
-    );
-
-    this.movie$ = index$.pipe(
-      switchMap(index => this.dataService.getMovieByIndex(index))
-    )
-  }
-  
   onGo(){
     this.dataService.setMovieByID(this.form.value);
   }

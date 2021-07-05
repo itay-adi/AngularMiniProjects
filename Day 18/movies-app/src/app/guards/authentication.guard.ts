@@ -11,9 +11,7 @@ export class AuthenticationGuard implements CanActivate {
   constructor(private auth: AuthenticationService,
               private router: Router){}
 
-  async canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Promise<true | UrlTree> {
+  async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<true | UrlTree> {
 
     let isLoggedIn = await this.auth
           .isLoggedIn()

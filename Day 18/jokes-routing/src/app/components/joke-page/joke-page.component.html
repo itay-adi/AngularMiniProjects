@@ -1,1 +1,18 @@
-<p>joke-page works!</p>
+<div *ngIf="(joke$ | async) as currentJoke">
+    <div class="jokeId">
+        {{currentJoke.id}}
+    </div>
+
+    <div class="type">
+        {{currentJoke.type}}
+    </div>
+
+    <div class="setup">
+        {{currentJoke.setup}}
+    </div>
+
+    <div class="punchline">
+        {{currentJoke.punchline}}
+    </div>
+
+</div>

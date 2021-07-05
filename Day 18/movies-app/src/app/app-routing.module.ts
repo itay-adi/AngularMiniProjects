@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movies/:index', component: MovieDetailsComponent }, //":" is a mark for a parameter
-  { path: 'movies/:index/edit', component: MovieEditComponent, canActivate: [AuthenticationGuard] },
+  { path: 'movies/:index/edit', component: MovieEditComponent, canActivate: [AuthenticationGuard]},
   { path: 'account', component: AccountComponent },
 ];
 

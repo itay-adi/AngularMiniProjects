@@ -1,0 +1,9 @@
+{{additionService.uid}}
+
+<input #inputA (input)="setNum1(inputA.value)">
++
+<input #inputB (input)="setNum2(inputB.value)">
+
+<button (click)="calc()" >=</button>
+
+{{result}}

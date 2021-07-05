@@ -27,7 +27,7 @@ export class MovieDetailsComponent implements OnInit {
 
     this.movie$ = index$.pipe(
       switchMap(index => this.dataService.getMovieByIndex(index))
-    )
+    );
 
     this.hasPrev$ = index$.pipe(
       map(index => index > 1)
