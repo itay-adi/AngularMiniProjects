@@ -10,6 +10,8 @@ export class HistoryService {
 
   logRecord(txt: string){
     this.records.push(txt);
+
+    console.log(this.records);
   }
 
   getHistory(): string[]{

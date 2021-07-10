@@ -15,7 +15,7 @@ import { AdditionService } from './services/addition.service';
   imports: [
     BrowserModule
   ],
-  providers: [AdditionService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
