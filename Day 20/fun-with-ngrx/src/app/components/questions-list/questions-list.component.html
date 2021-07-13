@@ -1,0 +1,3 @@
+<div *ngFor="let question of questions$ | async; let i = index">
+    {{i + 1}}. {{question.caption}}
+</div>

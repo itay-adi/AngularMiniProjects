@@ -7,6 +7,12 @@ import { BehaviorSubject, interval, Observable, Observer, ReplaySubject, Subject
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	isShowingReader = true;
+
+	toggleReader(){
+		this.isShowingReader = !this.isShowingReader;
+	}
+
   	createIntervalObservable() : Observable<number>{
     	return interval(1000);
   	}
