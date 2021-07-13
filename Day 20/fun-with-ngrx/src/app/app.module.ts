@@ -10,13 +10,17 @@ import { AddQuestionComponent } from './components/add-question/add-question.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionsListComponent } from './components/questions-list/questions-list.component';
 import { QuestionDetailsComponent } from './components/question-details/question-details.component';
+import { AnswerQuestionComponent } from './components/answer-question/answer-question.component';
+import { QuizResultsComponent } from './components/quiz-results/quiz-results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddQuestionComponent,
     QuestionsListComponent,
-    QuestionDetailsComponent
+    QuestionDetailsComponent,
+    AnswerQuestionComponent,
+    QuizResultsComponent
   ],
   imports: [
     BrowserModule,

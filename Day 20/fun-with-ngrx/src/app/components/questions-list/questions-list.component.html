@@ -1,3 +1,3 @@
-<div *ngFor="let question of questions$ | async; let i = index">
+<div *ngFor="let question of questions$ | async; let i = index" (click)="gotoQuestion(i)">
     {{i + 1}}. {{question.caption}}
 </div>

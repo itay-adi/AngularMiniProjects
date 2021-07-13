@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Question } from 'src/app/models/question.model';
@@ -12,9 +13,16 @@ import { selectAllQuestions } from 'src/app/redux/app.selector';
 export class QuestionsListComponent implements OnInit {
   questions$!: Observable<Question[]>;
 
-  constructor(private store: Store<any>) { }
+  constructor(
+    private store: Store<any>,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.questions$ = this.store.select(selectAllQuestions);
+  }
+
+  gotoQuestion(index: number){
+    this.router.navigate(['questions', 'view', index]);
   }
 }

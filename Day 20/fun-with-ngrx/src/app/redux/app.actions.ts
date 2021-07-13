@@ -4,3 +4,5 @@ import { Question } from "../models/question.model";
 export const reset = createAction('[User] Reset');
 
 export const addQuestion = createAction('[User] add question', props<{question: Question}>());
+
+export const addAnswer = createAction('[User] add Answer', props<{answer: number}>());

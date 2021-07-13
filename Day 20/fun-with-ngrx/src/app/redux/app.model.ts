@@ -2,6 +2,7 @@ import { Question } from "../models/question.model";
 
 export interface AppModel{
     readonly questions: Question[];
+    readonly answers: number[];
 }
 
 export const initialAppModel: AppModel = {
@@ -21,5 +22,7 @@ export const initialAppModel: AppModel = {
             answers: ['0','1','2','3'],
             correctAnswer: 1
         },
-    ]
+    ],
+
+    answers: []
 }
